@@ -1,0 +1,227 @@
+.detail-wrapper {
+    padding: 40px;
+
+    title {
+        font-size: 18px;
+    }
+
+    .desc {
+        font-size: 14px;
+        font-family: 'Raleway', sans-serif;
+        color: #7D7A9E;
+    }
+
+    .colors {
+        width: 100%;
+
+        .color-items {
+            width: 100%;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            row-gap: 10px;
+            margin-top: 30px;
+
+            li {
+                background-color: #ffffff;
+                border-radius: 20px;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                column-gap: 5px;
+
+                span {
+                    width: 26px;
+                    height: 26px;
+                    border-radius: 50%;
+                    display: inline-block;
+                }
+
+                &:nth-child(1) {
+                    span {
+                        background-color: #BAC4E0;
+                    }
+                }
+
+                &:nth-child(2) {
+                    span {
+                        background-color: #E9EFFD;
+                    }
+                }
+
+                &:nth-child(3) {
+                    span {
+                        background-color: #F2F3F6;
+                    }
+                }
+
+                &:nth-child(4) {
+                    span {
+                        background-color: #8F95A7;
+                    }
+                }
+
+                &:nth-child(5) {
+                    span {
+                        background-color: #5282F6;
+                    }
+                }
+
+                &:nth-child(6) {
+                    span {
+                        background-color: #222E4E;
+                    }
+                }
+            }
+        }
+    }
+
+    .fonts {
+        margin-top: 35px;
+
+        h4 {
+            font-size: 18px;
+        }
+
+        .font-list {
+            font-size: 16px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+            font-family: 'Raleway', sans-serif;
+            margin-top: 20px;
+        }
+    }
+}
+
+.tutorials-wrapper {
+    padding: 40px;
+
+    title {
+        font-size: 18px;
+    }
+
+    .desc {
+        font-size: 14px;
+        font-family: 'Raleway', sans-serif;
+        color: #7D7A9E;
+    }
+    
+    .skill {
+        margin-top: 20px;
+
+        .skill-title {
+            color: #7D7A9E;
+            font-size: 14px;
+        }
+
+        .link {
+            margin-top: 10px;
+            background-color: #ffffff;
+            border-radius: 5px;
+
+            a {
+                display: inline-block;
+                padding: 20px;
+                text-decoration: none;
+                color: inherit;
+
+                .user {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    h4 {
+                        font-size: 16px;
+                        font-weight: normal;
+                    }
+                }
+                
+                span {
+                    display: inline-block;
+                    color: #7D7A9E;
+                    font-size: 12px;
+                    margin-top: 10px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .text {
+        margin-top: 40px;
+
+        p {
+            color: #7D7A9E;
+            font-size: 14px;
+            text-align: center;
+
+            a {
+                color: #F775C1;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.code-wrapper {
+    padding: 40px;
+
+    title {
+        font-size: 18px;
+    }
+
+    .desc {
+        font-size: 14px;
+        font-family: 'Raleway', sans-serif;
+        color: #7D7A9E;
+    }
+
+    .link {
+        margin-top: 10px;
+        background-color: #ffffff;
+        border-radius: 5px;
+
+        a {
+            display: inline-block;
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+
+            .user {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                h4 {
+                    font-size: 16px;
+                    font-weight: normal;
+                }
+            }
+            
+            span {
+                display: inline-block;
+                color: #7D7A9E;
+                font-size: 12px;
+                margin-top: 10px;
+                width: 100%;
+            }
+        }
+    }
+    
+    .text {
+        margin-top: 40px;
+
+        p {
+            color: #7D7A9E;
+            font-size: 14px;
+            text-align: center;
+
+            a {
+                color: #F775C1;
+                text-decoration: none;
+            }
+        }
+    }
+}
