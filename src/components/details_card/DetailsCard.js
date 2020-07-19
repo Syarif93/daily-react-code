@@ -1,43 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './DetailsCard.scss';
-import { NavLink, BrowserRouter as Router, Switch, Route, useLocation } from 'react-router-dom';
 import { DetailsContent, TutorialsContent, CodeContent } from './Content';
+import { CSSTransition } from 'react-transition-group';
 
 const Card = () => {
+    const [detail, setDetail] = useState(true);
+    const [tutorials, setTutorials] = useState(false);
+    const [code, setCode] = useState(false)
+
     return(
-        <Router>
-            <div className="card">
-                <div className="nav">
-                    <ul className="nav-items">
-                        <li className="nav-item">
-                            <NavLink to="/detail" activeclassname="active">Details</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink to="/tutiroals" activeclassname="active">Tutiroals</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink to="/code" activeclassname="active">Code</NavLink>
-                        </li>
-                    </ul>
-                </div>
-                <div className="content">
-                    <Switch>
-                        <Route path="/detail">
-                            <DetailsContent />
-                        </Route>
-                        <Route path="/tutiroals">
-                            <TutorialsContent />
-                        </Route>
-                        <Route path="/code">
-                            <CodeContent />
-                        </Route>
-                        <Route path="*">
-                            <NoMatch />
-                        </Route>
-                    </Switch>
-                </div>
+        <div className="card">
+            <div className="nav">
+                <ul className="nav-items">
+                    <li className="nav-item">
+                        <a href="#" className={detail === true ? 'active' : null} onClick={
+                            () => setDetail(true) | setTutorials(false) | setCode(false)
+                        }>
+                            Details
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a href="#" className={tutorials === true ? 'active' : null} onClick={
+                            () => setTutorials(true) | setCode(false) | setDetail(false)
+                        }>
+                            tutiroals
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a href="#" className={code === true ? 'active' : null} onClick={
+                            () => setCode(true) | setDetail(false) | setTutorials(false)
+                        }>
+                            code
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </Router>  
+            <div className="content">
+                <CSSTransition in={detail} timeout={500} classNames="details" unmountOnExit>
+                    <DetailsContent />
+                </CSSTransition>
+                <CSSTransition in={tutorials} timeout={500} classNames="tutorials" unmountOnExit>
+                    <TutorialsContent />
+                </CSSTransition>
+                <CSSTransition in={code} timeout={500} classNames="codes" unmountOnExit>
+                    <CodeContent />
+                </CSSTransition>
+            </div>
+        </div>
     )
 }
 
@@ -45,18 +54,6 @@ const DetailsCard = () => {
     return (
         <div className="cards">
             <Card />
-        </div>
-    )
-}
-
-const NoMatch = () => {
-    let location = useLocation();
-
-    return (
-        <div>
-            <h3>
-                No Match for <code>{location.pathname}</code>
-            </h3>
         </div>
     )
 }

@@ -34,11 +34,13 @@
                     &.active {
                         background-color: #ffffff;
                         box-shadow: 0 5px 10px rgba(#60359A, .25);
+                        transition: .3s;
                     }
 
                     &:hover {
                         background-color: #ffffff;
                         box-shadow: 0 5px 10px rgba(#60359A, .25);
+                        transition: .3s;
                     }
                 }
             }
@@ -49,4 +51,52 @@
         height: 450px;
         overflow: auto;
     }
+}
+
+.details-enter {
+    opacity: 0;
+}
+.details-enter-active {
+    opacity: 1;
+}
+.details-exit {
+    opacity: 1;
+}
+.details-exit-active {
+    opacity: 0;
+}
+.details-enter-active, .details-exit-active {
+    transition: opacity 500ms;
+}
+
+.tutorials-enter {
+    opacity: 0;
+}
+.tutorials-enter-active {
+    opacity: 1;
+}
+.tutorials-exit {
+    opacity: 1;
+}
+.tutorials-exit-active {
+    opacity: 0;
+}
+.tutorials-enter-active, .tutorials-exit-active {
+    transition: opacity 500ms;
+}
+
+.codes-enter {
+    opacity: 0;
+}
+.codes-enter-active {
+    opacity: 1;
+}
+.codes-exit {
+    opacity: 1;
+}
+.codes-exit-active {
+    opacity: 0;
+}
+.codes-enter-active, .codes-exit-active {
+    transition: opacity 500ms;
 }
